@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">
+                <span class="navitem">Home</span>
+            </a></li>
+            <li><a href="input1.html">
+                <span class="navitem">Input</span>
+            </a></li>
+            <li class="active"><a href="hasil1.html">
+                <span class="navitem">Hasil</span>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <ul class="list">
+            <li>
+                <span class="title">Nama :</span>
+                <span id="nameValue"></span>
+            </li>
+            <li>
+                <span class="title">Email :</span>
+                <span id="emailValue"></span>
+            </li> 
+            <li>
+                <span class="title">Isi Pesan :</span>
+                <span id="messageValue"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const name = localStorage.getItem('nama');
+    const email = localStorage.getItem('email'); 
+    const message = localStorage.getItem('pesan');
+
+    document.getElementById('nameValue').textContent = name;
+    document.getElementById('emailValue').textContent = email; 
+    document.getElementById('messageValue').textContent = message;
+</script>
+</html>
